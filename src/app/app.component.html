@@ -1,0 +1,34 @@
+<ion-app>
+ <ion-menu contentId="main" menuId="main-menu" side="start" type="reveal">
+   <ion-header>
+     <ion-toolbar>
+       <ion-title>Menu</ion-title>
+     </ion-toolbar>
+   </ion-header>
+   <ion-content>
+     
+<ion-list>
+  <ion-item [routerLink]="['/search']">
+    <ion-icon slot="start" name="call-sharp"></ion-icon>
+    <ion-label >Search</ion-label>
+  </ion-item>
+
+  <ion-item [routerLink]="['/perak']">
+    <ion-icon slot="start" name="information-circle-sharp"></ion-icon>
+    <ion-label >Perak</ion-label>
+  </ion-item>
+
+  <ion-item [routerLink]="['/video']">
+    <ion-icon slot="start" name="headset-sharp"></ion-icon>
+    <ion-label>Video</ion-label>
+  </ion-item>
+
+</ion-list>
+
+   </ion-content>
+ </ion-menu>
+
+
+
+ <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

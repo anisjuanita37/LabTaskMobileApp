@@ -1,0 +1,7 @@
+{
+  "name": "AppKu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

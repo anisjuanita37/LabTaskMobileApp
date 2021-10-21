@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Searching Task</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar class="ion-text-center">
+    <ion-title>Search bar</ion-title>
+  </ion-toolbar>
+  <ion-list>
+    <ion-searchbar 
+    placeholder="Pilih Negeri" 
+    [(ngModel)]="searchTerm" 
+    (ionChange)="setFilteredItems()"
+    ></ion-searchbar>
+    
+    <ion-item *ngFor="let i of items" (click)="onDirectPage(i)">
+
+      <ion-avatar>
+        <img [src]="i.image" />
+      </ion-avatar>
+      <ion-label>{{i.name}} + {{i.no}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
